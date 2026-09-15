@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanıt Protokolü — Gizlilik Politikası</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 46rem; padding: 3rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a; background: #ffffff;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.3rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .94rem; }
+  th, td { border: 1px solid #e0e0e0; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f8; }
+  code { background: #f2f2f4; padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #121316; }
+    th, td { border-color: #2c2f36; }
+    th { background: #1b1d22; }
+    code { background: #1b1d22; }
+  }
+</style>
+</head>
+<body>
+<h1>Kanıt Protokolü — Gizlilik Politikası</h1>
+<p><strong>Son güncelleme:</strong> 15 Eylül 2026</p>
+<h2>Özet</h2>
+<p>Kanıt Protokolü hiçbir kişisel veri toplamaz, saklamaz veya aktarmaz.
+Uygulamaya girdiğiniz her şey yalnızca kendi telefonunuzda kalır.
+Uygulamanın internet erişim izni dahi yoktur.</p>
+<h2>Toplanan veriler</h2>
+<p><strong>Hiçbiri.</strong> Uygulama size hesap açtırmaz, e-posta veya telefon numarası
+istemez, konumunuza erişmez, reklam kimliğinizi okumaz.</p>
+<h2>Cihazınızda saklanan veriler</h2>
+<p>Aşağıdakiler yalnızca telefonunuzun uygulama deposunda tutulur ve
+telefondan hiçbir yere gönderilmez:</p>
+<ul>
+<li>Girdiğiniz iddialar, erteleme notları ve başarısızlık sebepleri</li>
+<li>Kanıt fotoğrafları (yalnızca sizin eklediğiniz görseller)</li>
+<li>Tuttuğunuz süreler, sonuç kayıtları ve seri/istatistik bilgileri</li>
+<li>Onboarding sırasında verdiğiniz profil bilgileri (yaş aralığı, cinsiyet
+  tercihi, eğitim, meslek, odak alanları, hitap şekli) — bunlar yalnızca
+  uygulamanın size nasıl seslendiğini ve hangi önerileri göstereceğini
+  belirlemek için kullanılır</li>
+<li>Hatırlatma saati ve bildirim tercihleri</li>
+</ul>
+<p>Bu veriler şifrelenmemiş biçimde, Android'in uygulamalara ayırdığı özel
+alanda saklanır ve diğer uygulamalar tarafından okunamaz.</p>
+<h2>İzinler ve neden isteniyor</h2>
+<table>
+<thead>
+<tr>
+<th>İzin</th>
+<th>Neden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bildirimler (POST_NOTIFICATIONS)</td>
+<td>Seçtiğiniz saatte günlük hatırlatma ve gün içi mesajları göstermek için. Reddedebilirsiniz; uygulamanın geri kalanı çalışmaya devam eder.</td>
+</tr>
+<tr>
+<td>Kamera (CAMERA)</td>
+<td>Yalnızca siz "kanıt fotoğrafı ekle" dediğinizde fotoğraf çekmek için. Fotoğraf cihazınızda kalır.</td>
+</tr>
+<tr>
+<td>Titreşim (VIBRATE)</td>
+<td>Bir iddiayı "yaptım" olarak işaretlediğinizde kısa dokunsal geri bildirim.</td>
+</tr>
+<tr>
+<td>Yeniden başlatmada çalışma (RECEIVE_BOOT_COMPLETED)</td>
+<td>Telefonunuz yeniden başladıktan sonra planlanmış hatırlatmanın kaybolmaması için.</td>
+</tr>
+</tbody>
+</table>
+<p>Uygulama ayrıca Android'in zamanlanmış iş altyapısını (WorkManager)
+kullandığı için sistem tarafından şu teknik izinler eklenir:
+<code>WAKE_LOCK</code>, <code>ACCESS_NETWORK_STATE</code>, <code>FOREGROUND_SERVICE</code>,
+<code>FOREGROUND_SERVICE_SHORT_SERVICE</code>, <code>BIND_JOB_SERVICE</code>, <code>DUMP</code>. Bunlar
+hatırlatmanın siz uygulamayı kapatmışken de zamanında çalışabilmesi
+içindir; hiçbiri veri toplamak veya göndermek için kullanılmaz.
+<code>ACCESS_NETWORK_STATE</code> yalnızca bağlantı durumunu okuyabilir, ağ
+üzerinden veri gönderemez.</p>
+<p>Uygulamanın <strong>INTERNET izni yoktur</strong>; teknik olarak veri gönderemez.
+Bunu kendiniz doğrulayabilirsiniz: Play Store'daki uygulama sayfasında
+"Uygulama izinleri → Tümünü gör" bölümünde internet izni listelenmez.</p>
+<h2>Üçüncü taraflar</h2>
+<p>Uygulama hiçbir analitik, reklam, çökme raporu veya izleme hizmeti
+kullanmaz. Verileriniz hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya
+kiralanmaz.</p>
+<h2>Çocuklar</h2>
+<p>Uygulama 13 yaş altındaki çocuklara yönelik değildir ve onlardan bilerek
+veri toplamaz — zaten hiç kimseden veri toplamaz.</p>
+<h2>Verilerinizi silme</h2>
+<p>İki yolu var:</p>
+<ol>
+<li><strong>Uygulama içinden:</strong> Profil → Ayarlar → Tehlikeli Bölge → kanıt
+   kayıtlarını sıfırla.</li>
+<li><strong>Tamamen:</strong> Uygulamayı telefonunuzdan kaldırın. Kaldırma işlemi tüm
+   kayıtları ve fotoğraf referanslarını siler.</li>
+</ol>
+<p>Verileriniz bizde bulunmadığı için bize silme talebi göndermenize gerek
+yoktur — silme işlemi tamamen sizin kontrolünüzdedir.</p>
+<p><strong>Uyarı:</strong> Veriler buluta yedeklenmediği için uygulamayı sildiğinizde ya
+da telefonunuzu değiştirdiğinizde kayıtlarınız geri getirilemez.</p>
+<h2>Sağlıkla ilgili uyarı</h2>
+<p>Kanıt Protokolü bir terapi, teşhis veya tedavi aracı değildir ve bir ruh
+sağlığı uzmanının yerini tutmaz. Bilişsel davranışçı terapinin davranışsal
+deney fikrinden esinlenen bir kayıt aracıdır.</p>
+<h2>Bu politikadaki değişiklikler</h2>
+<p>Politika değişirse bu sayfadaki "Son güncelleme" tarihi güncellenir.
+Uygulama veri toplamaya başlarsa (böyle bir planımız yok), değişiklik
+uygulama içinde açıkça bildirilir.</p>
+<h2>İletişim</h2>
+<p>Sorularınız için: <strong>nazmioktay@gmail.com</strong></p>
+</body>
+</html>
